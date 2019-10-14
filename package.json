@@ -1,80 +1,45 @@
 {
-  "name": "nivo",
-  "version": "0.52.0",
-  "private": true,
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/plouc/nivo/blob/master/LICENSE.md"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/plouc/nivo"
-  },
+  "name": "@nivo/bar",
+  "version": "0.59.2",
+  "license": "MIT",
   "author": {
     "name": "Raphaël Benitte",
     "url": "https://github.com/plouc"
   },
-  "keywords": [],
-  "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@ekino/config": "^0.3.0",
-    "@nivo/babel-preset": "latest",
-    "@nivo/generators": "latest",
-    "@storybook/addon-actions": "^5.0.3",
-    "@storybook/addon-info": "^5.0.3",
-    "@storybook/addon-knobs": "^5.0.3",
-    "@storybook/addon-links": "^5.0.3",
-    "@storybook/addon-storysource": "^5.0.3",
-    "@storybook/addons": "^5.0.3",
-    "@storybook/react": "^5.0.3",
-    "@storybook/theming": "^5.0.3",
-    "@types/lodash": "^4.14.123",
-    "@types/react": "^16.8.23",
-    "babel-eslint": "^8.2.1",
-    "babel-jest": "^24.5.0",
-    "babel-loader": "^8.0.5",
-    "chalk": "^2.4.2",
-    "clog-cli": "^1.0.0",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
-    "eslint": "^5.13.3",
-    "eslint-plugin-react": "^7.13.0",
-    "gh-pages": "^1.0.0",
-    "jest": "^24.7.1",
-    "jsdom": "^12.0.0",
-    "lerna": "^3.13.1",
-    "lodash": "^4.17.4",
-    "prettier": "^1.17.0",
-    "prop-types": "^15.7.2",
-    "puppeteer": "^0.13.0",
-    "raf": "^3.4.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-test-renderer": "^16.8.6",
-    "rollup": "^1.7.0",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-cleanup": "^3.1.1",
-    "rollup-plugin-node-resolve": "^4.0.1",
-    "rollup-plugin-prettier": "^0.6.0",
-    "rollup-plugin-strip-banner": "^0.2.0",
-    "rollup-plugin-typescript2": "^0.21.0",
-    "serve": "^10.1.2",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3"
+  "keywords": [
+    "nivo",
+    "dataviz",
+    "react",
+    "d3",
+    "charts",
+    "bar-chart"
+  ],
+  "main": "./dist/nivo-bar.cjs.js",
+  "module": "./dist/nivo-bar.esm.js",
+  "files": [
+    "README.md",
+    "LICENSE.md",
+    "index.d.ts",
+    "dist/"
+  ],
+  "dependencies": {
+    "@nivo/annotations": "0.59.1",
+    "@nivo/axes": "0.59.2",
+    "@nivo/colors": "0.59.0",
+    "@nivo/core": "0.59.1",
+    "@nivo/legends": "0.59.1",
+    "@nivo/tooltip": "0.59.1",
+    "d3-scale": "^3.0.0",
+    "d3-shape": "^1.2.2",
+    "lodash": "^4.17.11",
+    "react-motion": "^0.5.2",
+    "recompose": "^0.30.0"
   },
-  "resolutions": {
-    "upath": "1.1.0",
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
+  "peerDependencies": {
+    "prop-types": ">= 15.5.10 < 16.0.0",
+    "react": ">= 16.8.4 < 17.0.0"
   },
-  "scripts": {
-    "changelog": "rm CHANGELOG.md && node scripts/generate-changelog.js"
-  },
-  "workspaces": [
-    "packages/*",
-    "api",
-    "website"
-  ]
+  "publishConfig": {
+    "access": "public"
+  }
 }
